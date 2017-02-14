@@ -1,0 +1,39 @@
+### https://raw.github.com/github/gitignore/b2c694d792c005c770c42deaa868e97184e31794/ruby.gitignore
+
+*.gem
+*.rbc
+.bundle
+.config
+coverage
+InstalledFiles
+lib/bundler/man
+pkg
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
+tmp
+
+# YARD artifacts
+.yardoc
+_yardoc
+doc/
+
+
+### https://raw.github.com/github/gitignore/b2c694d792c005c770c42deaa868e97184e31794/Global/osx.gitignore
+
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+
+vendor/bundler

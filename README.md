@@ -1,6 +1,8 @@
 ## Deploy
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+and visit https://scheduler.heroku.com/dashboard to set `bundle exec ruby bot.rb`
+
 
 ## How to use
 

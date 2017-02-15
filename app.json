@@ -1,0 +1,30 @@
+{
+  "name": "UNEXT Reminder",
+  "description": "UNEXTのマイリストにある動画の配信終了日時を知らせます",
+  "repository": "https://github.com/hackugyo/unext_myist_bot.git",
+  "env": {
+    "UNEXT_ID": {
+      "description": "your UNEXT id",
+      "value": ""
+    },
+    "UNEXT_PASSWORD": {
+      "description": "your UNEXT password",
+      "value": ""
+    },
+    "HUBOT_SLACK_TOKEN": {
+      "description": "your bot's token on your Slack Team",
+      "value": ""
+    }
+  },
+  "addons": [
+    "scheduler:standard"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-ruby.git"
+    },
+    {
+      "url": "https://github.com/stomita/heroku-buildpack-phantomjs"
+    }
+  ]
+}

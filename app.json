@@ -26,5 +26,10 @@
     {
       "url": "https://github.com/stomita/heroku-buildpack-phantomjs"
     }
-  ]
+  ],
+  "formation": {
+    "web": {
+      "quantity": 0
+    }
+  }
 }

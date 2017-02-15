@@ -27,7 +27,7 @@ class Result
 
   def limit(day)
     @movies.select { |m|
-      DateTime.parse(m.limit) < day
+      DateTime.parse(m.limit) == day
     }.map { |m| "#{m.limit},\"#{m.title}\",#{m.price},#{m.url}" }
   end
 end

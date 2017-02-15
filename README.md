@@ -11,5 +11,9 @@ $ sh env.sh
 $ heroku addons:create scheduler:standard
 $ heroku addons:open scheduler # bundle exec ruby bot.rb を設定
 ```
+```
+$ heroku logs --ps scheduler.1 # ログ確認
+$ bundle exec ruby bot.rb # ローカルで実行
+```
 
 

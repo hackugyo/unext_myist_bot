@@ -16,18 +16,16 @@ class Result
   end
 
   def week
-    day = DateTime.now + 7
-    limit(day)
+    limit(Date.today, lambda {|p, q| (p - q).to_int == 7})
   end
   
   def today
-    day = DateTime.now
-    limit(day)
+    limit(Date.today)
   end
 
-  def limit(day)
+  def limit(day, proc = lambda {|p, q| (p - q).to_int == 0})
     @movies.select { |m|
-      DateTime.parse(m.limit) == day
+      proc.call(DateTime.parse(m.limit), day)
     }.map { |m| "#{m.limit},\"#{m.title}\",#{m.price},#{m.url}" }
   end
 end

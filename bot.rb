@@ -12,6 +12,7 @@ week = result.week.join(line)
 week = (week.length > 0 ? "今週が期限です\n#{week}" : "")
 today = result.today.join(line)
 today = (today.length > 0 ? "今日が期限です\n#{today}" : "")
+
 if (week.length > 0 or today.length > 0) then
   response = HTTP.post('https://slack.com/api/chat.postMessage', params: {
                          token: ENV['HUBOT_SLACK_TOKEN'],
@@ -20,4 +21,7 @@ if (week.length > 0 or today.length > 0) then
                          as_user: true,
                        })
   puts JSON.pretty_generate(JSON.parse(response.body))
+else
+  # 今週中のものを出す
+  puts result.limit(Date.today, lambda {|p, q| (p - q).to_int <= 7}).join(line)
 end

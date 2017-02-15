@@ -8,7 +8,8 @@ $ $ heroku create --buildpack https://github.com/heroku/heroku-buildpack-ruby.gi
 $ heroku buildpacks:add --index 1 https://github.com/stomita/heroku-buildpack-phantomjs
 $ git push heroku master
 $ sh env.sh
-$ heroku run bundle exec ruby bot.rb # 実行すると待ち受け体勢に入る
+$ heroku addons:create scheduler:standard
+$ heroku addons:open scheduler # bundle exec ruby bot.rb を設定
 ```
 
 

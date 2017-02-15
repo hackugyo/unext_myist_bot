@@ -1,16 +1,15 @@
-## Deploy
+## Deploy it
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-and visit https://scheduler.heroku.com/dashboard to set `bundle exec ruby bot.rb`
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)  
+and visit https://scheduler.heroku.com/dashboard to set `bundle exec ruby bot.rb`. Done.
 
-
-## How to use
+## How to deploy it from your local env
 
 ```
 $ source application.env # Make your own one
 $ bundle install --path vendor/bundler
 $ heroku login
-$ $ heroku create --buildpack https://github.com/heroku/heroku-buildpack-ruby.git
+$ heroku create --buildpack https://github.com/heroku/heroku-buildpack-ruby.git
 $ heroku buildpacks:add --index 1 https://github.com/stomita/heroku-buildpack-phantomjs
 $ git push heroku master
 $ sh env.sh
